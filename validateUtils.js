@@ -48,6 +48,14 @@ var validateUtils = (function() {
 		isZipcode: function(value) {
 			var reg = /^[0-9]{6}$/;
 			return reg.test(value);
+		},
+		/**
+		 * 验证UserAgent是否android手机
+		 * @param {Object} value
+		 */
+		isAndroid: function(value) {
+			var reg = /(Android);?[\s\/]+([\d.]+)?/;
+			return reg.test(value);
 		}
 	};
 	return validateUtils;
